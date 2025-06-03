@@ -38,7 +38,7 @@ export const DarkTogle = () => {
     <div className="text-2xl text-text">
       <button
         onClick={handletheme}
-        className=" border border-secondary shadow p-1 rounded-full hover:cursor-pointer "
+        className=" border border-text shadow p-1 rounded-full hover:cursor-pointer "
       >
         {isDark ? <BiSun /> : <BiMoon />}
       </button>

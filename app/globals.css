@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-alter: var(--background);
+  --color-background: var(--background);
   --color-primary: var(--primary);
   --color-text: var(--text);
   --color-secondary: var(--secondary)

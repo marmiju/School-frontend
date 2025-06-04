@@ -11,7 +11,7 @@ export const Speech = ({ speechs }: { speechs: SpeechsItemType[] }) => {
         return <SingleSpeech key={i} speech={speech} />;
       })} */}
       <SingleSpeech speech={speechs[0]} />
-      <Button children="বিস্তারিত" link="/about" />
+      <Button link="/about">বিস্তারিত</Button>
     </div>
   );
 };

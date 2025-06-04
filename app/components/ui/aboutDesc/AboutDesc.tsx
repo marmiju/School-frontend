@@ -9,7 +9,7 @@ export const AboutDesc = () => {
   return (
     <div className="text-text m-2 p-2 text-sm space-y-2">
       <p>{aboutData.aboutData.description}</p>
-      <Button children="বিস্তারিত" link="/about" />
+      <Button link="/about">বিস্তারিত</Button>
     </div>
   );
 };

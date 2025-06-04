@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 type props = {
-  children: string;
+  children: React.ReactNode;
   link: string;
 };
 

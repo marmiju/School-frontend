@@ -19,7 +19,7 @@ export const DesktopHeader = () => {
         {navLinks.map((link) => (
           <div
             key={link.name}
-            className="relative"
+            className="relative z-10"
             onMouseEnter={() => setOpenMenu(link.name)}
             onMouseLeave={() => setOpenMenu(null)}
           >

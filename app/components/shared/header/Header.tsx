@@ -5,7 +5,7 @@ import { HeaderTop } from "./top/HeaderTop";
 
 export const Header = () => {
   return (
-    <header className="grid">
+    <header className="grid z-10">
       <div>
         <div>
           <HeaderTop />

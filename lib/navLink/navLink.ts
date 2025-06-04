@@ -10,19 +10,7 @@ export const navLinks: NavItem[] = [
   {
     name: "আমাদের সম্পর্কে",
     href: "/about",
-    children: [
-      { name: "ভবনের ইতিহাস", href: "/about/history" },
-      { name: "অধ্যক্ষের বাণী", href: "/about/principal-message" },
-    ],
-  },
-
-  {
-    name: "বাণী সমূহ",
-    href: "/messages",
-    children: [
-      { name: "অধ্যক্ষের বাণী", href: "/messages/principal" },
-      { name: "চেয়ারম্যানের বাণী", href: "/messages/chairman" },
-    ],
+    
   },
 
   {

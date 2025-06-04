@@ -10,7 +10,7 @@ export const LogoTitle = () => {
       />
       <div>
         <h1 className="text-md md:text-lg lg:text-2xl font-bold ">
-          পাঁচগাছী বালিকা উচ্চ বিদ্যালয়
+          পাঁচগাছী উচ্চ বিদ্যালয়
         </h1>
         <p className="">স্থাপিতঃ ১৯৯১</p>
       </div>

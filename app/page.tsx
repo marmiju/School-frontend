@@ -1,3 +1,9 @@
+import { BreakingNews } from "./components/shared/breakingNews/BrekingNews";
+
 export default function Home() {
-  return <div>hello world</div>;
+  return (
+    <div>
+      <BreakingNews />
+    </div>
+  );
 }

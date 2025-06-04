@@ -40,7 +40,7 @@ export const DesktopHeader = () => {
                   <Link
                     key={child.name}
                     href={child.href}
-                    className={`inline-block px-4 py-2 hover:bg-text ${
+                    className={`block px-4 py-2 hover:bg-text ${
                       isActive(pathname, child.href)
                         ? "bg-secondary font-semibold"
                         : ""

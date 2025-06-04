@@ -5,7 +5,7 @@ import { DarkTogle } from "../../appearence/DarkTogle";
 export const HeaderTop = () => {
   return (
     <div className="flex justify-between max-w-[1280px] mx-auto p-2">
-      <div className="hidden md:flex w-full items-center">
+      <div className="hidden md:flex w-full text-primary items-center">
         <LogoTitle />
       </div>
       <div className="text-sm flex md:grid justify-between items-center w-full  md:justify-end  text-end ">

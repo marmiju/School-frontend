@@ -49,9 +49,11 @@ export const MobileHeader = () => {
   };
 
   return (
-    <div className="w-full bg-primary text-white px-4 py-3">
+    <div className="w-full bg-primary text-background px-4 py-3">
       <div className="flex justify-between items-center">
-        <LogoTitle />
+        <div className="text-background">
+          <LogoTitle />
+        </div>
         <div className="text-4xl" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <MdClose /> : <MdMenu />}
         </div>

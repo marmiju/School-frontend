@@ -1,3 +1,22 @@
+
+export interface MVWItemItemType {
+    title: string;
+    description: string;
+  }
+  
+  export interface BaniItemType {
+    title: string;
+    decription: string;
+  }
+  
+  export interface AboutUsType {
+    title: string;
+    description: string;
+    mvw: MVWItemItemType[];
+    bani: BaniItemType[];
+  }
+  
+
 export const AboutUs = {
     title: 'আমাদের সম্পর্কে',
     description: `পাঁচগাছী বালিকা উচ্চ বিদ্যালয় ওয়েবসাইটে আপনাকে স্বাগতম। পাঁচগাছী বালিকা উচ্চ বিদ্যালয় কুড়িগ্রাম জেলার একটি অন্যতম শিক্ষা প্রতিষ্ঠান। প্রতিষ্ঠার পর থেকেই আমাদের বিদ্যালয় ৬ষ্ঠ থেকে ১০ শ্রেণী পর্যন্ত নিয়মিত পাঠদানের পাশাপাশি শিক্ষার মান উন্নয়ন অব্যহত রেখেছে। প্রতি বছর আমাদের বিদ্যালয় থেকে শীক্ষার্থীগণ জে. এস. সি. এবং এস. এস. সি. পরীক্ষায় অংশগ্রহণ করে GPA-5 সহ বিভিন্ন শিক্ষা গ্রেডে উত্তীর্ণ হয়ে আসছে।

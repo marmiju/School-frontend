@@ -1,17 +1,21 @@
+"use client";
 import { SpeechsItemType } from "@/lib/aboutUs/AboutUS";
 import React from "react";
 import { SingleSpeech } from "./SingleSpeech";
 import { Button } from "../button/Button";
+import { usePathname } from "next/navigation";
 
 export const Speech = ({ speechs }: { speechs: SpeechsItemType[] }) => {
-  console.log(speechs);
+  const path = usePathname();
   return (
     <div>
-      {/* {speechs.map((speech, i) => {
-        return <SingleSpeech key={i} speech={speech} />;
-      })} */}
-      <SingleSpeech speech={speechs[0]} />
-      <Button link="/about">বিস্তারিত</Button>
+      {path == "/about" ? (
+        speechs.map((speech, i) => {
+          return <SingleSpeech speech={speech} />;
+        })
+      ) : (
+        <SingleSpeech speech={speechs[0]} />
+      )}
     </div>
   );
 };

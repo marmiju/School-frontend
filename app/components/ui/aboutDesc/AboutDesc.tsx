@@ -1,15 +1,10 @@
 "use client";
 import React from "react";
-import { Button } from "../button/Button";
-import { useSelector } from "react-redux";
-import { RootState } from "@/lib/store";
 
-export const AboutDesc = () => {
-  const aboutData = useSelector((state: RootState) => state.aboutUs);
+export const AboutDesc = ({ desc }: { desc: string }) => {
   return (
-    <div className="text-text m-2 p-2 text-sm space-y-2">
-      <p>{aboutData.aboutData.description}</p>
-      <Button link="/about">বিস্তারিত</Button>
+    <div className="text-text m-2 p-2  space-y-2">
+      <p>{desc}</p>
     </div>
   );
 };

@@ -2,7 +2,6 @@
 import { SpeechsItemType } from "@/lib/aboutUs/AboutUS";
 import React from "react";
 import { SingleSpeech } from "./SingleSpeech";
-import { Button } from "../button/Button";
 import { usePathname } from "next/navigation";
 
 export const Speech = ({ speechs }: { speechs: SpeechsItemType[] }) => {
@@ -11,7 +10,7 @@ export const Speech = ({ speechs }: { speechs: SpeechsItemType[] }) => {
     <div>
       {path == "/about" ? (
         speechs.map((speech, i) => {
-          return <SingleSpeech speech={speech} />;
+          return <SingleSpeech key={i} speech={speech} />;
         })
       ) : (
         <SingleSpeech speech={speechs[0]} />

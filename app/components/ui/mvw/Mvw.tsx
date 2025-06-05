@@ -6,7 +6,7 @@ export const Mvw = ({ mvw }: { mvw: MVWItemItemType[] }) => {
   return (
     <div className="space-y-4">
       {mvw.map((data, i) => {
-        return <SingleMvw data={data} />;
+        return <SingleMvw key={i} data={data} />;
       })}
     </div>
   );

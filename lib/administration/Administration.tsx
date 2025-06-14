@@ -1,13 +1,8 @@
-import { randomFillSync } from "crypto";
-import { RiFacebookFill } from "react-icons/ri";
-
 type BloodGroup = 'A+' | 'A-' | 'B+' | 'B-' | 'AB+' | 'AB-' | 'O+' | 'O-';
-
 type Category = 'teachers' | 'members' | 'staffs';
+type Role = string;
 
-type Role = string
-
-interface Person {
+export interface Person {
   name: string;
   role: Role;
   category: Category;
@@ -21,11 +16,12 @@ interface Person {
   phone: string;
   email?: string;
   experience?: string;
+  image?: string;
+  speech?: string;
 }
-import React from 'react';
 
 const Administration = ({cetagory}:{cetagory:string}) => {
-  const staffList: Person[] = [
+const staffList: Person[] = [
   {
     name: 'মোঃ মোজাফফর হোসেন',
     role: 'অফিস সহায়ক',
@@ -39,6 +35,7 @@ const Administration = ({cetagory}:{cetagory:string}) => {
     phone: '0146046872',
     email: '',
     experience: '',
+    image: 'https://i.ibb.co/zPXYVGZ/default-profile.png',
   },
   {
     name: 'সাবিনা ইয়াসমিন',
@@ -54,6 +51,14 @@ const Administration = ({cetagory}:{cetagory:string}) => {
     phone: '01712345678',
     email: 'sabina@example.com',
     experience: '১৫ বছরের প্রধান শিক্ষিকা হিসেবে অভিজ্ঞতা',
+    image: 'https://i.ibb.co/zPXYVGZ/default-profile.png',
+    speech: `আমি পাঁচগাছী বালিকা উচ্চ বিদ্যালয় প্রধান শিক্ষক হিসেবে আপনাদেরকে আমাদের স্কুল ওয়েবসাইটে স্বাগত জানাচ্ছি। এই ইউনিক প্লাটফর্মে আপনি প্রতিদিনের শিক্ষালীলা, আমাদের বিশেষ ঘটনা, এবং আমাদের ছাত্র-ছাত্রীদের জন্য প্রয়োজনীয় তথ্য পেয়ে যাবেন।
+
+শিক্ষা একটি চলমান প্রক্রিয়া। শিক্ষার মাধ্যমে মানুষ বর্বরতার যুগকে পেরিয়ে আধুনিক সভ্যতার যুগে তথা আধুনিক প্রযুক্তির নেটওয়ার্কে পদার্পন করেছে। আধুনিক বিশ্বায়নের যুগে শিক্ষাকে আর গতিশীল ও প্রাণবন্ত করা প্রয়োজন। আমাদের শিক্ষার্থীদেরকে যদি নৈতিক শিক্ষাসহ দক্ষ জনশক্তিতে রূপান্তরিত করতে পারি তাহলে বঙ্গবন্ধু শেখ মজিবুর রহমানের স্বপ্নের সোনার বাংলা গড়তে আমরা সক্ষম হব।
+
+আমাদের স্কুল একটি সম্প্রসারণশীল, বৈশ্বিক দৃষ্টিভঙ্গি এবং প্রযুক্তি উপযুক্ত পাঠশালা। এখানে ছাত্র-ছাত্রীরা শিক্ষা এবং সামাজিক পরিবেশে উন্নতির পথে ভূমিকা রাখে। আমাদের উদ্দেশ্য হলো তাদের নৈতিকভাবে উন্নত করে দেয়া, যাতে তারা উন্নত সমাজ তৈরি এবং নিজেকে সুপ্রতিষ্ঠিত করতে পারে।
+
+আমাদের স্কুল পরিবেশে শিক্ষার্থীদের উজ্জ্বল ভবিষ্যত তৈরি করার লক্ষ্যে প্রতিশ্রুতিবদ্ধ রয়েছি।`
   },
   {
     name: 'মোঃ আব্দুল করিম',
@@ -68,6 +73,7 @@ const Administration = ({cetagory}:{cetagory:string}) => {
     phone: '01876543210',
     email: 'karim@example.com',
     experience: '৩ বছরের অভিজ্ঞতা বিদ্যালয় পরিচালনায়',
+    image: 'https://i.ibb.co/zPXYVGZ/default-profile.png',
   },
   {
     name: 'রুহুল আমিন',
@@ -82,6 +88,7 @@ const Administration = ({cetagory}:{cetagory:string}) => {
     phone: '01678901234',
     email: 'amin@example.com',
     experience: 'বিদ্যালয়ের ব্যবস্থাপনা কমিটিতে ২ বছরের অভিজ্ঞতা',
+    image: 'https://i.ibb.co/zPXYVGZ/default-profile.png',
   },
   {
     name: 'শাহিনুর রহমান',
@@ -97,6 +104,7 @@ const Administration = ({cetagory}:{cetagory:string}) => {
     phone: '01567890123',
     email: 'shahin@example.com',
     experience: '১০ বছরের teacherতা অভিজ্ঞতা',
+    image: 'https://i.ibb.co/zPXYVGZ/default-profile.png',
   },
   {
     name: 'তাহমিনা আক্তার',
@@ -111,6 +119,7 @@ const Administration = ({cetagory}:{cetagory:string}) => {
     phone: '01911123456',
     email: 'tahmina@example.com',
     experience: '১১ বছরের লাইব্রেরি পরিচালনার অভিজ্ঞতা',
+    image: 'https://i.ibb.co/zPXYVGZ/default-profile.png',
   },
   {
     name: 'রফিকুল ইসলাম',
@@ -125,6 +134,7 @@ const Administration = ({cetagory}:{cetagory:string}) => {
     phone: '01799887766',
     email: 'rafik@example.com',
     experience: '৮ বছরের ল্যাব সহকারীর অভিজ্ঞতা',
+    image: 'https://i.ibb.co/zPXYVGZ/default-profile.png',
   },
   {
     name: 'আবুল কালাম আজাদ',
@@ -140,6 +150,7 @@ const Administration = ({cetagory}:{cetagory:string}) => {
     phone: '01855443322',
     email: 'azad@example.com',
     experience: '১৫ বছরের অভিজ্ঞতা শারীরিক শিক্ষায়',
+    image: 'https://i.ibb.co/zPXYVGZ/default-profile.png',
   },
   {
     name: 'মোছাঃ হাসিনা বেগম',
@@ -154,12 +165,13 @@ const Administration = ({cetagory}:{cetagory:string}) => {
     phone: '01611223344',
     email: 'hasina@example.com',
     experience: '১০ বছরের হিসাব সংরক্ষণের অভিজ্ঞতা',
+    image: 'https://i.ibb.co/zPXYVGZ/default-profile.png',
   }
 ];
+
  
-  return staffList.map((person,index) => {
-      return  person.category === cetagory
-  })
+const filteredStaff = staffList.filter((person) => person.category === cetagory);
+  return filteredStaff
 };
 
 export default Administration;

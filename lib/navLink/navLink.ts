@@ -18,6 +18,7 @@ export const navLinks: NavItem[] = [
     href: "",
     children: [
       { name: "স্টাফ তালিকা", href: "/administration/staffs" },
+      { name: "members", href: "/administration/members" },
       { name: "শিক্ষকগণ", href: "/administration/teachers" },
     ],
   },

@@ -27,7 +27,7 @@ export const DesktopHeader = () => {
               href={link.href}
               className={`hover:underline ${
                 isActive(pathname, link.href)
-                  ? "font-bold underline"
+                  ? "font-bold underline "
                   : "font-normal"
               }`}
             >
@@ -40,9 +40,9 @@ export const DesktopHeader = () => {
                   <Link
                     key={child.name}
                     href={child.href}
-                    className={`block px-4 py-2 hover:bg-text ${
+                    className={`block px-4 py-2 hover:bg-text hover:text-secondary ${
                       isActive(pathname, child.href)
-                        ? "bg-secondary font-semibold"
+                        ? "bg-secondary font-semibold text-text"
                         : ""
                     }`}
                   >

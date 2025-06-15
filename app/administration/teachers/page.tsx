@@ -1,4 +1,4 @@
-import PersonCard from '@/app/components/personCard/PersonCard';
+import PersonCard from '@/app/components/Card/personCard/PersonCard';
 import Administration, { Person } from '@/lib/administration/Administration';
 import React from 'react';
 

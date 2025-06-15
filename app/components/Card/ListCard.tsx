@@ -3,7 +3,7 @@ import React from 'react';
 
 const ListCard = ({person}:{person:Person}) => {
     return (
-        <div className=' p-2 rounded-lg bg-secondary/20 backdrop-blur-2xl text-text transition-shadow duration-300'>
+        <div className=' p-2 rounded-lg bg-secondary/50 backdrop-blur-2xl text-text transition-shadow duration-300'>
             <p className=' px-4 py-2'>{`নামঃ ${person.name}`}</p>
             {person.subjects && <p className=' px-4 py-2'>{`পদবিঃ ${person.subjects}`}</p>}
             <p className=' px-4 py-2'>{`যোগদানের তারিখঃ  ${person.joinDate}`}</p>

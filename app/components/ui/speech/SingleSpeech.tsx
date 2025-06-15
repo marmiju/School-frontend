@@ -33,7 +33,7 @@ const handleViewMore = () => {
         />
       
       <p className="text-text px-2">{description}</p>
-      <button className="text-sm hover:cursor-pointer" onClick={handleViewMore}>{isExpanded ? 'show less':'view more'}</button>
+      <button className="text-sm hover:cursor-pointer text-text" onClick={handleViewMore}>{isExpanded ? 'show less':'view more'}</button>
     </div>
   );
 };

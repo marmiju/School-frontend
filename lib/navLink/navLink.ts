@@ -1,6 +1,6 @@
-type NavItem = {
+export type NavItem = {
   name: string;
-  href: string;
+  href?: string;
   children?: NavItem[];
 };
 
@@ -15,19 +15,17 @@ export const navLinks: NavItem[] = [
 
   {
     name: "এডমিনিস্ট্রেশন",
-    href: "",
+    href: "/administration",
     children: [
-      { name: "স্টাফ তালিকা", href: "/administration/staffs" },
-      { name: "members", href: "/administration/members" },
-      { name: "শিক্ষকগণ", href: "/administration/teachers" },
+      { name: "অফিস সহকারী", href: "/administration/staffs" },
+      { name: "সদস্যবৃন্দ", href: "/administration/members" },
+      { name: "শিক্ষক মন্ডলী", href: "/administration/teachers" },
     ],
   },
-
   {
     name: "একাডেমিক",
-    href: "/academic",
     children: [
-      { name: "বিষয় তালিকা", href: "/academic/subjects" },
+      { name: "শ্রেনী শাখা ও বিভাগসমুহ", href: "/academic/class-division" },
       { name: "শ্রেণী রুটিন", href: "/academic/routine" },
     ],
   },

@@ -1,7 +1,7 @@
 "use client";
 
 import { montserrat } from "@/lib/Font";
-import { navLinks } from "@/lib/navLink/navLink";
+import { NavLinks } from "@/lib/navLink/navLink";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useState } from "react";
@@ -16,7 +16,7 @@ export const DesktopHeader = () => {
   return (
     <div className={`bg-primary p-4 text-background ${montserrat.className}`}>
       <div className="max-w-[1280px] mx-auto flex gap-6 justify-around">
-        {navLinks.map((link) => (
+        {NavLinks.map((link) => (
           <div
             key={link.name}
             className="relative z-10"

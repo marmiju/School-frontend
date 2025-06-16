@@ -1,10 +1,10 @@
-import { NavItem, navLinks } from '@/lib/navLink/navLink';
+import { NavItem, NavLinks } from '@/lib/navLink/navLink';
 import Link from 'next/link';
 import React from 'react';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 
 const page = () => {
-    const administration = navLinks.find(link => link.href === '/administration');
+    const administration = NavLinks.find(link => link.href === '/administration');
     return (
         <div>
             {
@@ -20,8 +20,6 @@ const page = () => {
                                <h2 className="text-xl font-bold bg-secondary w-full text-center flex justify-center gap-2 p-10 items-center">{item.name} <FaExternalLinkAlt />
                             </h2>
                             </Link>
-
-
                         ))}
                     </div>
                 ) : (

@@ -4,7 +4,7 @@ export type NavItem = {
   children?: NavItem[];
 };
 
-export const navLinks: NavItem[] = [
+export const NavLinks: NavItem[] = [
   { name: "হোম", href: "/" },
 
   {
@@ -26,10 +26,9 @@ export const navLinks: NavItem[] = [
     name: "একাডেমিক",
     children: [
       { name: "শ্রেনী শাখা ও বিভাগসমুহ", href: "/academic/class-division" },
-      { name: "শ্রেণী রুটিন", href: "/academic/routine" },
+      { name: "শিক্ষার্থীদের তালিকা", href: "/academic/student-list" },
     ],
   },
-
   {
     name: "ভর্তি",
     href: "/admission",

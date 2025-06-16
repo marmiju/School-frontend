@@ -5,39 +5,13 @@ import { LogoTitle } from "../logotitle/LogoTitle";
 import { MdMenu, MdClose } from "react-icons/md";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { NavLinks } from "@/lib/navLink/navLink";
 
 // Navigation item type
-type NavItem = {
-  name: string;
-  href: string;
-  children?: NavItem[];
-};
+
 
 // Sample navigation
-const navLinks: NavItem[] = [
-  { name: "হোম", href: "/" },
-  {
-    name: "আমাদের সম্পর্কে",
-    href: "/about",
-    children: [
-      { name: "ভবনের ইতিহাস", href: "/about/history" },
-      { name: "অধ্যক্ষের বাণী", href: "/about/principal-message" },
-    ],
-  },
-  {
-    name: "বাণী সমূহ",
-    href: "/messages",
-    children: [
-      { name: "অধ্যক্ষের বাণী", href: "/messages/principal" },
-      { name: "চেয়ারম্যানের বাণী", href: "/messages/chairman" },
-    ],
-  },
-  { name: "নোটিশ", href: "/notice" },
-  { name: "রেজাল্ট", href: "/result" },
-  { name: "গ্যালারি", href: "/gallery" },
-  { name: "যোগাযোগ", href: "/contact" },
-  { name: "লগইন", href: "/login" },
-];
+const navLinks = NavLinks;
 
 export const MobileHeader = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -65,16 +39,24 @@ export const MobileHeader = () => {
           {navLinks.map((link) => (
             <div key={link.name}>
               <div className="flex justify-between items-center">
-                <Link
-                  href={link.href}
-                  className={`block py-2 px-3 rounded ${
-                    pathname === link.href
-                      ? "bg-white text-primary font-bold"
-                      : ""
-                  }`}
-                >
-                  {link.name}
-                </Link>
+                {
+                  link.href ? (
+                    <Link
+                      href={link.href}
+                      className={`block py-2 px-4 rounded text-lg ${
+                        pathname === link.href
+                          ? "bg-white text-primary font-semibold"
+                          : ""
+                      }`}
+                    >
+                      {link.name}
+                    </Link>
+                  ) : (
+                    <span className="block py-2 px-4 rounded text-lg">
+                      {link.name}
+                    </span>
+                  )
+                }
                 {link.children && (
                   <button
                     onClick={() => toggleDropdown(link.name)}
@@ -89,14 +71,14 @@ export const MobileHeader = () => {
                   {link.children.map((child) => (
                     <Link
                       key={child.name}
-                      href={child.href}
-                      className={`block py-1 px-4 rounded text-sm ${
+                      href={child.href || "#"}
+                      className={`block py-1 px-4 rounded text-lg ${
                         pathname === child.href
                           ? "bg-white text-primary font-semibold"
                           : ""
                       }`}
                     >
-                      ↳ {child.name}
+                      {child.name}
                     </Link>
                   ))}
                 </div>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Header } from "./components/shared/header/Header";
 import { Providers } from "./Providers";
+import { hind_siliguri } from "@/lib/Font";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className={`${hind_siliguri.className}`} >
         <Header />
         <Providers>{children}</Providers>
       </body>

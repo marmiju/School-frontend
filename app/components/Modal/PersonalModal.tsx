@@ -9,7 +9,7 @@ const PersonalModal = ({person, handlemodal}:{person:Person, handlemodal:()=>voi
     return (
         <div className="fixed bg-black/50   inset-0 z-50 flex items-center justify-center space-x-2">
              
-            <div className="bg-secondary/20 border border-white/10 backdrop-blur-3xl p-6 rounded-lg shadow-sm">
+            <div className="bg-secondary/20 border border-white/30 backdrop-blur-3xl p-6 rounded-lg shadow-sm">
                  
                 <div className='grid md:flex gap-4'>
                    <ImageCard imageUrl={person.image!}  title={person.name} subTitle={person.education}/>

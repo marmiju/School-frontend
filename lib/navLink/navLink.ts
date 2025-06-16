@@ -27,6 +27,7 @@ export const NavLinks: NavItem[] = [
     children: [
       { name: "শ্রেনী শাখা ও বিভাগসমুহ", href: "/academic/class-division" },
       { name: "শিক্ষার্থীদের তালিকা", href: "/academic/student-list" },
+      { name: "বইসমুহের তালিকা", href: "/academic/book-list" },
     ],
   },
   {

@@ -28,14 +28,13 @@ export const NavLinks: NavItem[] = [
       { name: "শ্রেনী শাখা ও বিভাগসমুহ", href: "/academic/class-division" },
       { name: "শিক্ষার্থীদের তালিকা", href: "/academic/student-list" },
       { name: "বইসমুহের তালিকা", href: "/academic/book-list" },
+      { name: "পরিক্ষার রুটিন", href: "/academic/exam-rutine" },
     ],
   },
   {
     name: "ভর্তি",
-    href: "/admission",
     children: [
-      { name: "ভর্তি প্রক্রিয়া", href: "/admission/process" },
-      { name: "ভর্তি ফি", href: "/admission/fees" },
+      { name: "ভর্তি প্রক্রিয়া", href: "/admission/fee" },
     ],
   },
 

@@ -29,6 +29,7 @@ export const NavLinks: NavItem[] = [
       { name: "শিক্ষার্থীদের তালিকা", href: "/academic/student-list" },
       { name: "বইসমুহের তালিকা", href: "/academic/book-list" },
       { name: "পরিক্ষার রুটিন", href: "/academic/exam-rutine" },
+      { name: "ক্লাস রুটিন", href: "/academic/class-rutine" },
     ],
   },
   {

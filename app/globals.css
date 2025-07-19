@@ -8,14 +8,14 @@
 }
 
 :root {
-  --background: #ffffff;
+  --background: #fbfff8;
   --primary: #141414;
   --text: #3f3f3f;
   --secondary: #f1f1f1;
 }
 
 .dark {
-  --background: #000000;
+  --background: #06040e;
   --primary: #ffffff;
   --text: #cacaca;
   --secondary: #181818;

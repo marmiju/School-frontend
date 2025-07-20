@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "class": "Class 10",
+    "section": "A",
+    "semester": "Mid-Term",
+    "link": "https://example.com/results/class10-a-midterm"
+  },
+  {
+    "id": 2,
+    "class": "Class 9",
+    "section": "B",
+    "semester": "Final",
+    "link": "https://example.com/results/class9-b-final"
+  },
+  {
+    "id": 3,
+    "class": "Class 8",
+    "section": "A",
+    "semester": "Half-Yearly",
+    "link": "https://example.com/results/class8-a-halfyearly"
+  },
+  {
+    "id": 4,
+    "class": "Class 7",
+    "section": "C",
+    "semester": "Quarterly",
+    "link": "https://example.com/results/class7-c-quarterly"
+  },
+  {
+    "id": 5,
+    "class": "Class 6",
+    "section": "B",
+    "semester": "Final",
+    "link": "https://example.com/results/class6-b-final"
+  }
+]

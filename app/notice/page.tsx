@@ -3,7 +3,6 @@ import Hero from "../components/hero/Hero";
 import FetchNotice from "@/lib/notice/FetchNotice";
 
 const Page = async () => {
-    const bookList = BookList();
     const Notices = await FetchNotice()
  
 

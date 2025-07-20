@@ -1,5 +1,4 @@
 import BookList from "@/lib/academic/BookList";
-import { GrView } from "react-icons/gr";
 
 const Page = () => {
     const bookList = BookList();

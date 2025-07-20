@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "title": "Mid Term Exam Schedule Published",
+    "link": "https://example.com/notices/mid-term-schedule"
+  },
+  {
+    "id": 2,
+    "title": "Class Suspended on 25th July",
+    "link": "https://example.com/notices/class-suspended-25-july"
+  },
+  {
+    "id": 3,
+    "title": "New Admission Circular 2025",
+    "link": "https://example.com/notices/admission-2025"
+  },
+  {
+    "id": 4,
+    "title": "Library Remains Closed on Fridays",
+    "link": "https://example.com/notices/library-closed"
+  },
+  {
+    "id": 5,
+    "title": "Workshop on AI and Machine Learning",
+    "link": "https://example.com/notices/ai-workshop"
+  }
+]

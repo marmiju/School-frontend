@@ -17,7 +17,8 @@ export default async function FetchNotice(){
         return await result
         
     } catch (error) {
-        new Error('Something Went Wrong!')
+        console.log(error)
+        new Error('Something went wrong!')
     }
 
 } 

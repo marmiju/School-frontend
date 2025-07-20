@@ -21,9 +21,9 @@ const Page = async () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {Notices!.map((notice, index) => (
+                        {Notices!.map((notice) => (
                             <tr
-                                key={index}
+                                key={notice.id}
                                 className="text-center border-b text-text border-secondary hover:bg-secondary"
                             >
                                 <td className="p-2 border">{notice.id}</td>

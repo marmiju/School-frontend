@@ -20,6 +20,7 @@ export default async function FetchResult(){
         return await result
         
     } catch (error) {
+        console.log(error)
         new Error('Something Went Wrong!')
     }
 

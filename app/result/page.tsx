@@ -21,7 +21,7 @@ const Page = async () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {Results!.map((result, index) => (
+                        {Results!.map((result) => (
                             <tr
                                 key={result.id}
                                 className="text-center border-b text-text border-secondary hover:bg-secondary"

@@ -1,4 +1,4 @@
-export default function (){
+export default function Loading(){
     return(
         <div>
             <h1 className="text-text text-6xl">Loading........</h1>

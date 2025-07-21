@@ -1,4 +1,3 @@
-import BookList from "@/lib/academic/BookList";
 import Hero from "../components/hero/Hero";
 import FetchNotice from "@/lib/notice/FetchNotice";
 

@@ -3,6 +3,7 @@ import { Person } from '@/lib/administration/Administration';
 import React, { useState } from 'react';
 import { FaUserGraduate } from 'react-icons/fa';
 import PersonalModal from '../../Modal/PersonalModal';
+import Image from 'next/image';
 
 interface person {
     person: Person;
@@ -20,7 +21,7 @@ const PersonCard = ({person}:person) => {
            className="relative">
             <div className="border border-secondary bg-secondary rounded-lg p-2 shadow-sm hover:shadow-md transition-shadow duration-300 hover:cursor-pointer group   ">
                 <div className='grid gap-4 mb-1 md:flex'>             
-                        <img className='w-64 rounded' src={person.image} alt={person.name} />
+                        <Image className='w-64 rounded' placeholder='blur' loading="lazy" blurDataURL="data:image/jpeg..." width={300} height={200} src={person.image!} alt={person.name} />
                     {
                         person.speech && <p className='text-md p-4 bg-background text-text '>{person.speech}</p>
                     }

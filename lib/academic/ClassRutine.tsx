@@ -1,4 +1,3 @@
-import React from 'react';
 interface ClassRutine {
     class: string;
     group?: string;

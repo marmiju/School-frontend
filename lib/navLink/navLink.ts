@@ -35,7 +35,7 @@ export const NavLinks: NavItem[] = [
   {
     name: "ভর্তি",
     children: [
-      { name: "ভর্তি প্রক্রিয়া", href: "/admission/fee" },
+      { name: "ভর্তি প্রক্রিয়া", href: "/admission" },
     ],
   },
 

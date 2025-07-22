@@ -11,7 +11,9 @@ const Page = async () => {
             <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-6">
                 <Hero title="রেজাল্ট/ফলাফল" />
 
-                <table className="w-full border-collapse border border-secondary">
+                {
+                    Results ?
+                    <table className="w-full border-collapse border border-secondary">
                     <thead>
                         <tr className="bg-secondary text-primary text-center">
                             <th className="p-2 border">ক্লাস</th>
@@ -46,6 +48,12 @@ const Page = async () => {
                         ))}
                     </tbody>
                 </table>
+                :
+                <div className="flex justify-center">
+                      <p>There have no Notice!</p>
+                </div>
+
+                }
             </div>
         </>
     );

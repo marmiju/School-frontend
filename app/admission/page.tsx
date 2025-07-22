@@ -1,5 +1,4 @@
 'use client'
-
 import React, { useState } from "react";
 import InputBox from "../components/inputBox/InputBox";
 
@@ -32,9 +31,7 @@ const Page = () => {
     // handle Submit
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault()
-        if (!formData.terms) {
-
-        }
+        console.log(formData)
     }
 
 
@@ -65,18 +62,31 @@ const Page = () => {
                     <InputBox name="guardianPhone" onChange={handleChege} value={formData.guardianPhone} label="অভিভাবকের ফোন নাম্বার" required={true} type="text" />
                     <InputBox name="Phone" onChange={handleChege} value={formData.Phone} label="স্টুডেন্ট ফোন নাম্বার" required={true} type="text" />
                     {/* nationality select */}
-                    <div className="space-y-[2px]">
+
+                </div>
+                {/*nationality religion birth certificate*/}
+                <div className="flex flex-wrap gap-2 justify-between">
+                    <div className="space-y-[2px] w-[45%] md:w-[20%]">
                         <p>জাতিয়তা ®</p>
-                        <select name="nationality" id="nationality" className="border p-1.5 rounded">
+                        <select name="nationality" onChange={handleChege} value={formData.nationality} className="border p-1.5 rounded w-full">
                             <option value="bangladeshi">বাংলাদেশি</option>
                             <option value="others">অন্যান্য</option>
                         </select>
                     </div>
-                </div>
-                {/* religion birth certificate*/}
-                <div className="flex gap-2">
-                    <InputBox className=" w-1/2" name="religion" onChange={handleChege} value={formData.religion} label="ধর্ম" required={true} type="text" />
-                    <InputBox className=" w-1/2" name="birthCertificate" onChange={handleChege} value={formData.birthCertificate} label="জন্মনিবন্ধনের নম্বর" required={true} type="text" />
+
+                    {/* religion */}
+                    <div className="space-y-[2px] w-[45%] md:w-[20%]">
+                        <p>ধর্ম ®</p>
+                        <select  name="religion" onChange={handleChege} value={formData.religion} className="border p-1.5 rounded w-full">
+                            <option value="ইসলাম">ইসলাম</option>
+                            <option value="হিন্দু">হিন্দু</option>
+                            <option value="খ্রিস্টান">খ্রিস্টান</option>
+                            <option value="বৌদ্ধ">বৌদ্ধ</option>
+                            <option value="অন্যান্য">অন্যান্য</option>
+                        </select>
+                    </div>
+
+                    <InputBox className="w-full md:w-[58.5%]" name="birthCertificate" onChange={handleChege} value={formData.birthCertificate} label="জন্মনিবন্ধনের নম্বর" required={true} type="text" />
                 </div>
                 {/*  religion birth certificate*/}
                 <div className="flex gap-2">
@@ -100,7 +110,7 @@ const Page = () => {
                     <InputBox className="w-[30%] md:w-[15%]" name="parmanentDistrict" onChange={handleChege} value={formData.parmanentDistrict} label=" জেলা" required={true} type="text" />
                 </div>
                 <p className="gap-2">
-                    <input type="checkbox" required={true} /> <span> অভিভাবকের অঙ্গীকার</span>
+                    <input type="checkbox" name="terms" onChange={handleChege} required={true} checked={formData.terms} /> <span> অভিভাবকের অঙ্গীকার</span>
                 </p>
 
                 <p className="p-4 bg-secondary my-2">

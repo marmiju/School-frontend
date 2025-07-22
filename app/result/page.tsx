@@ -3,7 +3,7 @@ import FetchResult from "@/lib/result/FetchResult";
 
 const Page = async () => {
     const Results = await FetchResult()
- 
+
 
     return (
         <>
@@ -13,45 +13,45 @@ const Page = async () => {
 
                 {
                     Results ?
-                    <table className="w-full border-collapse border border-secondary">
-                    <thead>
-                        <tr className="bg-secondary text-primary text-center">
-                            <th className="p-2 border">ক্লাস</th>
-                            <th className="p-2 border">সেকশন</th>
-                            <th className="p-2 border">সেমিসটার</th>
-                            <th className="p-2 border">একশন</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {Results!.map((result) => (
-                            <tr
-                                key={result.id}
-                                className="text-center border-b text-text border-secondary hover:bg-secondary"
-                            >
-                                <td className="p-2 border">{result.class}</td>
-                                <td className="p-2 border">{result.section}</td>
-                                <td className="p-2 border">{result.semester}</td>
-                                <td className="p-2 border">
-
-                                    <a
-                                        href={result.link}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="text-primary hover:underline"
+                        <table className="w-full border-collapse border border-secondary">
+                            <thead>
+                                <tr className="bg-secondary text-primary text-center">
+                                    <th className="p-2 border">ক্লাস</th>
+                                    <th className="p-2 border">সেকশন</th>
+                                    <th className="p-2 border">সেমিসটার</th>
+                                    <th className="p-2 border">একশন</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {Results!.map((result) => (
+                                    <tr
+                                        key={result.id}
+                                        className="text-center border-b text-text border-secondary hover:bg-secondary"
                                     >
-                                        View
-                                    </a>
+                                        <td className="p-2 border">{result.class}</td>
+                                        <td className="p-2 border">{result.section}</td>
+                                        <td className="p-2 border">{result.semester}</td>
+                                        <td className="p-2 border">
+
+                                            <a
+                                                href={result.link}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="text-primary hover:underline"
+                                            >
+                                                View
+                                            </a>
 
 
-                                </td>
-                            </tr>
-                        ))}
-                    </tbody>
-                </table>
-                :
-                <div className="flex justify-center">
-                      <p>There have no Notice!</p>
-                </div>
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                        :
+                        <div className="flex justify-center text-text">
+                            <p>There have no result available!</p>
+                        </div>
 
                 }
             </div>

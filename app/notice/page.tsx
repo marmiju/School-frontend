@@ -10,8 +10,11 @@ const Page = async () => {
 
             <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-6">
                 <Hero title="নোটিশ" />
-
-                <table className="w-full border-collapse border border-secondary">
+                
+                {/* if exist notice so exicute otherwise ignore and show no notice avaiable! */}
+                {
+                    Notices ?
+                    <table className="w-full border-collapse border border-secondary">
                     <thead>
                         <tr className="bg-secondary text-primary text-center">
                             <th className="p-2 border">তারিখ</th>
@@ -20,7 +23,7 @@ const Page = async () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {Notices!.map((notice) => (
+                        {Notices.map((notice) => (
                             <tr
                                 key={notice.id}
                                 className="text-center border-b text-text border-secondary hover:bg-secondary"
@@ -44,6 +47,14 @@ const Page = async () => {
                         ))}
                     </tbody>
                 </table>
+                :
+                <div className="flex justify-center">
+                      <p>There have no Notice!</p>
+                </div>
+
+                }
+
+                
             </div>
         </>
     );

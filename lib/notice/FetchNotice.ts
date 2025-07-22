@@ -1,21 +1,21 @@
 export interface Notice {
-  id: number;
-  title: string;
-  link: string;
+    id: number;
+    title: string;
+    link: string;
 }
 
 
-const baseurl = process.env.Url  || 'http://localhost:3000'
+const baseurl = process.env.Url || 'http://localhost:3000'
 
 
-export default async function FetchNotice(){
+export default async function FetchNotice() {
 
     try {
-        const res =await fetch(`${baseurl}/data/notice.json`)
+        const res = await fetch(`${baseurl}/data/notice.json`)
 
-        const result:Notice[] = await res.json()
-        return await result
-        
+        const result: Notice[] = await res.json() || []
+        return result
+
     } catch (error) {
         console.log(error)
         new Error('Something went wrong!')

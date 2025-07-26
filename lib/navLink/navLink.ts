@@ -15,7 +15,7 @@ export const NavLinks: NavItem[] = [
 
   {
     name: "এডমিনিস্ট্রেশন",
-    href: "/administration",
+    href: "#",
     children: [
       { name: "অফিস সহকারী", href: "/administration/staffs" },
       { name: "সদস্যবৃন্দ", href: "/administration/members" },
@@ -42,7 +42,5 @@ export const NavLinks: NavItem[] = [
   { name: "নোটিশ", href: "/notice" },
   { name: "রেজাল্ট", href: "/result" },
   { name: "গ্যালারি", href: "/gallery" },
-  { name: "তথ্য বাতায়ন", href: "/info-portal" },
   { name: "যোগাযোগ", href: "/contact" },
-  { name: "লগইন", href: "/login" },
 ];

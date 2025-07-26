@@ -1,6 +1,6 @@
 import ExamRutin from "@/lib/academic/ExamRutine";
 
-const Page = () => {
+const ExamPage = () => {
     const examRutine = ExamRutin();
 
     return (
@@ -50,4 +50,4 @@ const Page = () => {
     );
 };
 
-export default Page;
+export default ExamPage;

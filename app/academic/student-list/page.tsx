@@ -1,6 +1,6 @@
 import StudentList from "@/lib/academic/StudentList";
 
-const Page = () => {
+const StudentPage = () => {
     const studentList = StudentList();
 
     return (
@@ -51,4 +51,4 @@ const Page = () => {
     );
 };
 
-export default Page;
+export default StudentPage;

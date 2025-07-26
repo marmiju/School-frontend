@@ -1,6 +1,6 @@
 import BookList from "@/lib/academic/BookList";
 
-const Page = () => {
+const BookListPage = () => {
     const bookList = BookList();
 
     return (
@@ -51,4 +51,4 @@ const Page = () => {
     );
 };
 
-export default Page;
+export default BookListPage;

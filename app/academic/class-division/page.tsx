@@ -1,7 +1,7 @@
 import class_divission from '@/lib/academic/class_divission';
 import React from 'react';
 
-const page = () => {
+const classPage = () => {
     const academicClassDivisions = class_divission()
     return (
         <div className='max-w-[1280px] mx-auto my-2 py-20 col-span-12  text-center space-y-20 '>
@@ -25,4 +25,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default classPage;

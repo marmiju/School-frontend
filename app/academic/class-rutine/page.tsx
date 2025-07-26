@@ -1,6 +1,6 @@
 import ClassRutine from "@/lib/academic/ClassRutine";
 
-const Page = () => {
+const RutinePage = () => {
     const classRutine = ClassRutine();
 
     return (
@@ -48,4 +48,4 @@ const Page = () => {
     );
 };
 
-export default Page;
+export default RutinePage;

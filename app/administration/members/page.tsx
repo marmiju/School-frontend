@@ -2,7 +2,7 @@ import PersonCard from '@/app/components/Card/personCard/PersonCard';
 import Administration, { Person } from '@/lib/administration/Administration';
 import React from 'react';
 
-const page = () => {
+const MemberPage = () => {
     const persons:Person[] = Administration({cetagory: 'members'});
     return (
         <div>
@@ -18,4 +18,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default MemberPage;

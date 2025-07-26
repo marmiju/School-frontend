@@ -4,7 +4,7 @@ import { HomeAboute } from "./components/ui/homeAbout/HomeAbout";
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="p-2">
       <Banner />
       <BreakingNews />
       <HomeAboute />

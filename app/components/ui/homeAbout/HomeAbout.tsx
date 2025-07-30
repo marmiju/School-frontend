@@ -8,6 +8,9 @@ import Loading from "@/app/loading";
 import LatestHeilights from "../../latestHeilight/LatestHeilights";
 import FetchResult from "@/lib/result/FetchResult";
 import Link from "next/link";
+import FetchGallery from "@/lib/gellery/FetchGallery";
+import Image from "next/image";
+
 
 export const HomeAboute = async () => {
   const about: AboutUsType = AboutUs;
@@ -15,7 +18,14 @@ export const HomeAboute = async () => {
   const latestNotice = notice ? notice[notice.length - 1] : null;
   const result = await FetchResult()
   const latestresult = result ? result[result.length - 1] : null;
-  console.log(latestresult)
+  const gallery = await FetchGallery()
+
+
+  // images 
+  const images = (gallery?.filter(val => val.type === 'image').slice(0, gallery.length > 10 ? 10 : gallery.length)) || [];
+  const videos = (gallery?.filter(val => val.type === 'video').slice(0, gallery.length > 10 ? 10 : gallery.length)) || [];
+
+
 
   return (
     <div className="max-w-[1280px] mx-auto space-x-4 grid grid-cols-12">
@@ -29,10 +39,53 @@ export const HomeAboute = async () => {
             <Loading />
             : <LatestHeilights data={latestNotice!} title="সম্প্রতি প্রকাশ হওয়া নোটিস" />
           }
-          {!notice ?
+          {!result ?
             <Loading />
             : <LatestHeilights data={latestresult!} title="সম্প্রতি প্রকাশ হওয়া রেজাল্ট" />
           }
+
+          {/* photo galeery  */}
+          <div>
+            <h3 className="text-background bg-primary p-2"> ফটো গ্যালারি</h3>
+            <div className="flex flex-wrap gap-2 ">
+              {
+                images && images
+                  .map((val) => (
+                    <Image 
+                     width={300}
+                     height={300}
+                     
+                      key={val.id}
+                      src={val.url}
+                      alt={'Gallery image'}
+                      className="my-2 rounded w-[100%] md:w-[30%]"
+                    />
+                  ))
+              }
+            </div>
+          </div>
+
+          {/* video galeery  */}
+          <div>
+            <h3 className="text-background bg-primary p-2">ভিডিও গ্যালারি</h3>
+            <div className="flex flex-wrap gap-2 ">
+              {
+                gallery && gallery
+                  .filter(val => val.type === 'video')
+                  .map((val) => (
+                    <iframe
+                    key={val.id}
+                      className="w-[100%] h-[400px]"
+                      src="https://www.youtube.com/embed/pkq-WvR-MVo?list=RDwcACMOlC6iY"
+                      title="YouTube video player"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    ></iframe>
+                  ))
+              }
+            </div>
+          </div>
 
         </section>
       </section>
@@ -47,7 +100,7 @@ export const HomeAboute = async () => {
           <Link target="_blank" href={'https://www.teachers.gov.bd/'}>⇲ Teachers</Link>
         </div>
         <div className="border rounded-[24px] p-2 border-text mt-6">
-          <iframe className="w-full h-96 rounded-[16px]" src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d1850418.8628409489!2d88.25451487377123!3d25.06462188276674!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1753870489753!5m2!1sen!2sbd" width="600" height="450"   loading="lazy" ></iframe>
+          <iframe className="w-full h-96 rounded-[16px]" src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d1850418.8628409489!2d88.25451487377123!3d25.06462188276674!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1753870489753!5m2!1sen!2sbd" width="600" height="450" loading="lazy" ></iframe>
         </div>
       </section>
 

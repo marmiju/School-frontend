@@ -18,21 +18,34 @@
         "url": "https://images.unsplash.com/photo-1501785888041-af3ef285b470"
     },
     {
-        "id": "4",
+        "id": "7523",
         "type": "video",
         "title": "Introduction to My Website",
         "url": "https://youtu.be/imthGy9gePU?list=RDwcACMOlC6iY"
     },
     {
-        "id": "5",
+        "id": "72563",
         "type": "video",
         "title": "Office Tour",
         "url": "https://www.youtube.com/watch?v=3JZ_D3ELwOQ"
     },
     {
-        "id": "6",
+        "id": "1964",
         "type": "video",
         "title": "Project Demo",
         "url": "https://www.youtube.com/watch?v=ysz5S6PUM-U"
+    },
+    {
+        "id": "2563",
+        "type": "image",
+        "title": "Beautiful Landscape",
+        "url": "https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+    },
+    {
+        "id": "99",
+        "type": "image",
+        "title": "City Night Lights",
+        "url": "https://images.unsplash.com/photo-1491553895911-0055eca6402d"
     }
+
 ]

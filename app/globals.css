@@ -24,3 +24,11 @@
 body {
   background-color: var(--background);
 }
+
+.staff{
+  @apply border border-red-600
+}
+
+.btn{
+  @apply bg-blue-500 text-white
+}

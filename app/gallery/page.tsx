@@ -7,8 +7,6 @@ import Image from "next/image";
 const Page = async () => {
     const gallery = await FetchGallery()
     console.log("Gallery", gallery)
-
-
     return (
         <>
             <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 py-6">

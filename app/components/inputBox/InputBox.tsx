@@ -27,7 +27,7 @@ const InputBox = ({label,type = 'text',name,value,onChange,placeholder = '',requ
         onChange={onChange}
         placeholder={placeholder}
         required={required}
-        className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-text"
+        className="w-full px-4 py-2 border border-text/50 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-text"
       />
     </div>
   );

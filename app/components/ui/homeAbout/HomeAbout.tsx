@@ -70,8 +70,7 @@ export const HomeAboute = async () => {
             <h3 className="text-background bg-primary p-2">ভিডিও গ্যালারি</h3>
             <div className="flex flex-wrap gap-2 ">
               {
-                gallery && gallery
-                  .filter(val => val.type === 'video')
+                videos && videos
                   .map((val) => (
                     <iframe
                     key={val.id}
